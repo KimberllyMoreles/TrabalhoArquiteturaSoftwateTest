@@ -12,9 +12,9 @@ public class CategoriaDAOTest {
     }
 
     @Test
-    @Ignore  
+    //@Ignore  
     public void inserir() {
-        Categoria cat = new Categoria("Alimentos");
+        Categoria cat = new Categoria("Fruta");
         CategoriaDAO dao = new CategoriaDAO();
         if (dao.save(cat)) {
             System.out.println("Salvo com sucesso");
@@ -36,8 +36,8 @@ public class CategoriaDAOTest {
     @Test
     @Ignore
     public void editar(){        
-        Categoria cat = new Categoria("Roupas");
-        cat.setId(4);
+        Categoria cat = new Categoria("Frutas");
+        cat.setId(1);
         CategoriaDAO dao = new CategoriaDAO();
         
         if(dao.update(cat)){
@@ -48,9 +48,10 @@ public class CategoriaDAOTest {
     }
     
     @Test
+    @Ignore
     public void excluir(){
         Categoria cat = new Categoria();
-        cat.setId(5);
+        cat.setId(1);
         CategoriaDAO dao = new CategoriaDAO();
         if (dao.delete(cat)) {
             System.out.println("Excluído com sucesso");

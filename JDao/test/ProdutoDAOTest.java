@@ -17,8 +17,8 @@ public class ProdutoDAOTest {
     @Ignore
     public void inserir() {
         Categoria cat = new Categoria();
-        cat.setId(4);
-        Produto prod = new Produto("Moleton", 4, 102.80, cat);
+        cat.setId(2);
+        Produto prod = new Produto("Limães", 4, 102.80, cat);
         ProdutoDAO dao = new ProdutoDAO();
         if (dao.save(prod)) {
             System.out.println("Salvo com sucesso");
@@ -27,7 +27,8 @@ public class ProdutoDAOTest {
         }
     }
     
-    @Test  
+    @Test
+    @Ignore  
     public void listar(){
         ProdutoDAO dao = new ProdutoDAO();
         for(Produto ca: dao.findAll()){
@@ -39,9 +40,9 @@ public class ProdutoDAOTest {
     @Ignore
     public void editar(){
         Categoria cat = new Categoria();
-        cat.setId(3);
-        Produto prod = new Produto("Belgravia", 2, 22.80, cat);
-        prod.setId(2);
+        cat.setId(2);
+        Produto prod = new Produto("Limão", 2, 22.80, cat);
+        prod.setId(1);
         ProdutoDAO dao = new ProdutoDAO();
         if (dao.update(prod)) {
             System.out.println("Editado com sucesso");
@@ -51,10 +52,10 @@ public class ProdutoDAOTest {
     }
     
     @Test
-    @Ignore
+    //@Ignore
     public void excluir(){        
         Produto prod = new Produto();
-        prod.setId(2);
+        prod.setId(1);
         ProdutoDAO dao = new ProdutoDAO();
         if (dao.delete(prod)) {
             System.out.println("Excluído com sucesso");
